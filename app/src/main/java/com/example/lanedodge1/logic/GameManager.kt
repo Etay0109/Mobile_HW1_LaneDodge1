@@ -5,17 +5,27 @@ import com.example.lanedodge1.utilities.CellType
 class GameManager(private val lifeCount: Int = 3) {
     companion object {
         const val ROWS = 8
-        const val COLS = 3
+        const val COLS = 5
     }
     private var ticks = 0
     private val obstaclesMatrix = Array(ROWS) { Array(COLS) { CellType.EMPTY } }
     private var lastRowState = Array(COLS) { CellType.EMPTY }
 
-    var carPosition: Int = 1
+    var carPosition: Int = COLS / 2
         private set
 
     var collisions: Int = 0
         private set
+
+    var coins: Int = 0
+        private set
+
+    var distance: Int = 0
+        private set
+
+    fun getScore(): Int {
+        return distance + coins * 10
+    }
 
     val isGameOver: Boolean
         get() = collisions == lifeCount
@@ -54,25 +64,37 @@ class GameManager(private val lifeCount: Int = 3) {
     }
 
     fun checkCollision() {
-        val last_row = ROWS - 1
+        val lastRow = ROWS - 1
 
         for (col in 0 until COLS) {
 
-            if (obstaclesMatrix[last_row][col] == CellType.OBSTACLE &&
-                lastRowState[col] == CellType.OBSTACLE) {
+            val current = obstaclesMatrix[lastRow][col]
+            val previous = lastRowState[col]
 
+            if (current == CellType.OBSTACLE && previous == CellType.OBSTACLE) {
                 if (col == carPosition) {
                     onCollision()
                 }
+                obstaclesMatrix[lastRow][col] = CellType.EMPTY
+            }
 
-                obstaclesMatrix[last_row][col] = CellType.EMPTY
+            if (current == CellType.COIN) {
+
+                if (col == carPosition) {
+                    coins++
+                    obstaclesMatrix[lastRow][col] = CellType.EMPTY
+                }
+                else if (previous == CellType.COIN) {
+                    obstaclesMatrix[lastRow][col] = CellType.EMPTY
+                }
             }
         }
 
         for (col in 0 until COLS) {
-            lastRowState[col] = obstaclesMatrix[last_row][col]
+            lastRowState[col] = obstaclesMatrix[lastRow][col]
         }
     }
+
 
 
 
@@ -81,26 +103,28 @@ class GameManager(private val lifeCount: Int = 3) {
         if (ticks % 3 == 0) {
             val col = (0 until COLS).random()
             if (obstaclesMatrix[0][col] == CellType.EMPTY) {
-                obstaclesMatrix[0][col] = CellType.OBSTACLE
+                obstaclesMatrix[0][col] = if (ticks % 4 == 0)
+                    CellType.COIN else CellType.OBSTACLE
+
             }
         }
     }
 
     fun moveObstaclesDown() {   //Move obstacle down on the matrix
-
         for (row in ROWS - 2 downTo 0) {
             for (col in 0 until COLS) {
-                if (obstaclesMatrix[row][col] == CellType.OBSTACLE) {
-                    if (obstaclesMatrix[row + 1][col] == CellType.EMPTY) {
-                        obstaclesMatrix[row + 1][col] = CellType.OBSTACLE
-                        obstaclesMatrix[row][col] = CellType.EMPTY
-                    }
+                if (obstaclesMatrix[row][col] != CellType.EMPTY &&
+                    obstaclesMatrix[row + 1][col] == CellType.EMPTY) {
+
+                    obstaclesMatrix[row + 1][col] = obstaclesMatrix[row][col]
+                    obstaclesMatrix[row][col] = CellType.EMPTY
                 }
             }
         }
     }
 
     fun tick() {
+        distance ++
         moveObstaclesDown()
         checkCollision()
         addNewObstacle()

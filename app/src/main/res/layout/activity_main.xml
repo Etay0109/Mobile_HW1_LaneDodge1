@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/road"
-    tools:context=".utilities.MainActivity">
+    tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/main_IMG_hearts"
@@ -41,7 +41,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/main_obstacles_matrix"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:orientation="vertical"
         android:layout_below="@id/main_IMG_hearts"
         android:layout_above="@id/main_BTN_left">
@@ -73,6 +73,24 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/cell_0_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_0_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_0_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -114,6 +132,24 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_1_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_1_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <!-- ROW 2 -->
@@ -143,6 +179,24 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/cell_2_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_2_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_2_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -184,6 +238,24 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_3_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_3_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <!-- ROW 4 -->
@@ -213,6 +285,24 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/cell_4_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_4_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_4_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -254,6 +344,24 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_5_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_5_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <!-- ROW 6 -->
@@ -283,6 +391,24 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/cell_6_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_6_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cell_6_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -372,6 +498,54 @@
                     android:visibility="invisible" />
             </FrameLayout>
 
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/cell_7_3_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/car"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/cell_7_3_obstacle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/obstacle"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/cell_7_4_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/car"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/cell_7_4_obstacle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/obstacle"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -397,15 +571,54 @@
         android:background="@drawable/button"
         android:padding="0dp" />
 
-    <TextView
-        android:id="@+id/main_LBL_game_over"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_LBL_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/game_over"
-        android:textSize="@dimen/game_over_text_size"
+        android:text="Score: 0"
+        android:textSize="@dimen/score_text_size"
         android:textStyle="bold"
-        android:textColor="#FFFFFFFF"
+        android:textColor="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/margin_score"
+        android:layout_marginTop="@dimen/margin_score"/>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_LAYOUT_game_over"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
         android:visibility="gone"
-        android:layout_centerInParent="true"/>
+        android:background="#AA000000">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_LBL_game_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game Over"
+            android:textSize="@dimen/game_over_textsize"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="@dimen/game_over_margin"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_top_ten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to Top 10"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_back_to_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to Menu"
+            android:layout_marginTop="@dimen/back_button_margin" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 </RelativeLayout>
