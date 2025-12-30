@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/record_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/item_margin_horizontal"
+    android:layout_marginVertical="@dimen/item_margin_vartical"
+    app:cardCornerRadius="@dimen/item_card_corner"
+    app:cardElevation="@dimen/item_cardElevation"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E0E0E0">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_defult"
+        android:background="@color/white">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/record_TXT_score"
+            android:layout_width="@dimen/text_width"
+            android:layout_height="@dimen/text_height"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_defult"
+            android:textStyle="bold"
+            android:background="#A5D6A7"
+            android:layout_marginEnd="@dimen/text_margin"
+            tools:text="1234" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/record_TXT_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1A1A1A"
+                android:textSize="@dimen/name_text_size"
+                android:textStyle="bold"
+                tools:text="Player Name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/record_TXT_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/location_text_size"
+                android:layout_marginTop="2dp"
+                tools:text="Lat: 32.1, Lon: 34.8" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/record_TXT_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="@dimen/rank_text_size"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/rank_margin_start"
+            android:layout_marginEnd="@dimen/rank_margin_end"
+            android:layout_gravity="end"
+            tools:text="#1" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>
